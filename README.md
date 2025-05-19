@@ -2,13 +2,13 @@
 
 A modern, responsive blog editor web application built with React and Tailwind CSS. This tool allows users to create, edit, and manage blog posts with a user-friendly interface.
 
-## 🌐 Live Demo
+## Live Demo
 
 Check out the live version here: [https://blog-editor-iota.vercel.app](https://blog-editor-iota.vercel.app)
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js
 - **Backend**: Node.js, Express.js, Mongoose.
@@ -18,7 +18,7 @@ Check out the live version here: [https://blog-editor-iota.vercel.app](https://b
 
 ---
 
-## 🚀 Features
+## Features
 
 - Live blog post editing
 - Responsive design for all screen sizes
@@ -28,7 +28,7 @@ Check out the live version here: [https://blog-editor-iota.vercel.app](https://b
 
 ---
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 Follow these steps to run the project locally:
 

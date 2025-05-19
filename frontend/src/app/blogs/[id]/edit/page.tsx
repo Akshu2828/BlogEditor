@@ -50,25 +50,6 @@ export default function EditBlogPage() {
     }
   }, [blog]);
 
-  // const handlePublish = async () => {
-  //   try {
-  //     await fetch(`${backUrl}/api/blogs/publish`, {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({
-  //         id,
-  //         title,
-  //         content,
-  //         tags: tags.split(",").map((tag) => tag.trim()),
-  //         status: "published",
-  //       }),
-  //     });
-  //     router.push("/");
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
   const handleEditBlog = async () => {
     try {
       const res = await fetch(`${backUrl}/api/blogs/${id}/edit`, {
@@ -151,13 +132,6 @@ export default function EditBlogPage() {
               >
                 {blog?.status === "draft" ? "Save Draft" : "Update Blog"}
               </button>
-
-              {/* <button
-                onClick={handlePublish}
-                className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold transition shadow-md"
-              >
-                Publish Blog
-              </button> */}
             </div>
           </>
         )}

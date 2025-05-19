@@ -2,11 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const router = useRouter();
   const [token, setToken] = useState<string | null>(null);
-  // const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
@@ -60,35 +62,39 @@ function Navbar() {
             </p>
           )}
         </div>
+        <div className="md:hidden">
+          <FontAwesomeIcon
+            icon={menuOpen ? faTimes : faBars}
+            className="text-2xl cursor-pointer"
+            onClick={() => setMenuOpen(!menuOpen)}
+          />
+        </div>
       </div>
-      {/* 
+
       {menuOpen && (
         <div className="md:hidden px-4 pb-4 flex flex-col gap-4">
-          <form onSubmit={handleSearch} className="flex flex-col gap-2">
-            <input
-              placeholder="Search Destination"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-400 rounded-lg outline-none focus:ring-2 focus:ring-blue-300"
-            />
-            <button className="bg-red-500 w-fit text-white px-4 py-2 rounded-lg font-bold hover:bg-red-600">
-              <FontAwesomeIcon icon={faSearch} className="mr-2" />
-              Search
-            </button>
-          </form>
           <p
             onClick={() => {
-              router.push("/createPage");
               setMenuOpen(false);
             }}
             className="text-lg font-medium cursor-pointer"
+          ></p>
+          <p
+            onClick={() => router.push("/editor")}
+            className="text-lg cursor-pointer bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl font-medium transition-all duration-300 shadow-md hover:scale-105"
           >
-            Airbnb Your Home
+            Create Blog
+          </p>
+          <p
+            onClick={() => router.push("/drafts")}
+            className="text-lg cursor-pointer bg-gray-500 hover:bg-gray-800 text-white px-5 py-2 rounded-xl font-medium transition-all duration-300 shadow-md hover:scale-105"
+          >
+            Drafts
           </p>
           {token ? (
             <p
               onClick={() => {
-                logout();
+                logOut();
                 setMenuOpen(false);
               }}
               className="bg-red-600 w-fit text-white px-4 py-2 rounded-lg font-bold cursor-pointer"
@@ -98,7 +104,7 @@ function Navbar() {
           ) : (
             <p
               onClick={() => {
-                router.push("/authPage");
+                router.push("/auth");
                 setMenuOpen(false);
               }}
               className="font-bold cursor-pointer"
@@ -107,7 +113,7 @@ function Navbar() {
             </p>
           )}
         </div>
-      )} */}
+      )}
     </div>
   );
 }

@@ -46,38 +46,8 @@ export default function Page() {
           <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">
             All Blogs
           </h1>
-          {/* <div className="flex gap-4">
-            <button
-              onClick={() => router.push("/auth")}
-              className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-xl font-medium transition-all duration-300 shadow-md hover:scale-105"
-            >
-              Sign Up
-            </button>
-            <button
-              onClick={() => router.push("/editor")}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl font-medium transition-all duration-300 shadow-md hover:scale-105"
-            >
-              logout
-            </button>
-          </div> */}
         </div>
 
-        {/* <div className="flex gap-4">
-          <button
-            onClick={() => router.push("/drafts")}
-            className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-xl font-medium transition-all duration-300 shadow-md hover:scale-105"
-          >
-            Drafts
-          </button>
-          <button
-            onClick={() => router.push("/editor")}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl font-medium transition-all duration-300 shadow-md hover:scale-105"
-          >
-            + Create Blog
-          </button>
-        </div> */}
-
-        {/* Blog List */}
         {loading ? (
           <div className="flex justify-center mt-20">
             <span className="text-gray-500 text-lg animate-pulse">

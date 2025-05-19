@@ -63,11 +63,6 @@ export default function AuthPage() {
     <>
       <Navbar />
       <div className="p-4 max-w-md h-[80vh] mx-auto flex flex-col justify-center">
-        {/* Wrap in Suspense 👇 */}
-        {/* <Suspense fallback={<div>Loading message...</div>}>
-          <AuthMessage />
-        </Suspense> */}
-
         <h2 className="text-2xl text-red-500 font-bold mb-4 text-center">
           {mode === "register" ? "Register" : "Login"}
         </h2>
